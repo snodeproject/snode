@@ -1,0 +1,87 @@
+name: "✨ Feature Request"
+description: "Proponi una nuova funzionalità o un miglioramento per Snode"
+title: "[FEATURE] Descrizione breve della proposta"
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per voler migliorare **Snode**!  
+        Le nuove funzionalità aiutano il runtime a crescere e diventare più utile per tutti.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Titolo della funzionalità
+      placeholder: "Esempio: Aggiungere supporto a fs.readFile"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione della funzionalità
+      description: "Spiega chiaramente cosa dovrebbe fare la nuova feature."
+      placeholder: |
+        Vorrei che Snode supportasse la lettura dei file in modo asincrono...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Perché è utile?
+      description: "Spiega perché questa funzionalità è importante per te o per altri utenti."
+      placeholder: |
+        Questa feature permetterebbe di...
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Esempio di utilizzo
+      description: "Mostra come immagineresti l'uso della feature in JavaScript."
+      render: javascript
+      placeholder: |
+        import { readFile } from "snode/fs";
+
+        readFile("test.txt", (err, data) => {
+          console.log(data);
+        });
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area del runtime coinvolta
+      options:
+        - Moduli built-in (http, fs, path, ecc.)
+        - Event loop
+        - REPL
+        - SPM (Snode Package Manager)
+        - CLI
+        - Engine JS (dukpy)
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+      description: "Hai pensato ad altri modi per ottenere lo stesso risultato?"
+      placeholder: "Potrei farlo anche tramite Python, ma..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informazioni aggiuntive
+      placeholder: "Qualsiasi dettaglio utile non incluso sopra."
+    validations:
+      required: false
+      
