@@ -1,0 +1,116 @@
+name: "💥 Crash Report"
+description: "Segnala un crash improvviso o un arresto anomalo di Snode"
+title: "[CRASH] Descrizione breve del crash"
+labels: ["crash", "bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un crash di **Snode**.  
+        I crash sono particolarmente importanti per migliorare la stabilità del runtime.
+
+  - type: input
+    id: snode-version
+    attributes:
+      label: Versione di Snode
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Versione di Python
+      placeholder: "3.12.x"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operativo
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Altro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: crash-type
+    attributes:
+      label: Tipo di crash
+      description: "Seleziona il tipo di crash osservato"
+      options:
+        - Crash immediato all'avvio
+        - Crash durante l'esecuzione di codice JS
+        - Crash nel modulo HTTP
+        - Crash nel modulo SPM
+        - Crash nel REPL
+        - Crash casuale / non deterministico
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del crash
+      placeholder: "Cosa stavi facendo quando Snode è crashato?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passi per riprodurre
+      placeholder: |
+        1. Esegui `python snode.py file.js`
+        2. ...
+        3. Crash
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Codice coinvolto
+      render: javascript
+      placeholder: |
+        // Incolla qui il codice JS che causa il crash
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log completo del crash
+      description: "Incolla qui l'errore Python o l'output della console"
+      render: text
+      placeholder: |
+        Traceback (most recent call last):
+          File "snode.py", line ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      placeholder: |
+        - Terminale: Windows Terminal / bash / zsh
+        - Permessi: admin / user
+        - Virtualenv: sì/no
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informazioni aggiuntive
+      placeholder: "Qualsiasi dettaglio utile non incluso sopra."
+    validations:
+      required: false
+      
