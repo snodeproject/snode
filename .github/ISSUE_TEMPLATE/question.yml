@@ -1,0 +1,59 @@
+name: "❓ Question / Help"
+description: "Fai una domanda su Snode, sul suo funzionamento o su una parte del runtime"
+title: "[QUESTION] Descrizione breve della domanda"
+labels: ["question"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hai una domanda su **Snode**?  
+        Usa questo template per chiedere chiarimenti, capire come funziona una parte del runtime,
+        o ottenere aiuto su un comportamento che non è un bug.
+
+  - type: input
+    id: topic
+    attributes:
+      label: Argomento della domanda
+      placeholder: "Esempio: Modulo HTTP, Event Loop, SPM, Loader, ecc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Domanda
+      description: "Scrivi chiaramente la tua domanda o il tuo dubbio."
+      placeholder: |
+        Non capisco come funziona createServer...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contesto
+      description: "Spiega cosa stavi facendo o cosa vuoi ottenere."
+      placeholder: |
+        Sto provando a creare un server HTTP che risponde con JSON...
+    validations:
+      required: false
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Codice o comando coinvolto
+      render: javascript
+      placeholder: |
+        // Incolla qui il codice JS o Python rilevante
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informazioni aggiuntive
+      placeholder: "Qualsiasi dettaglio utile non incluso sopra."
+    validations:
+      required: false
+      
