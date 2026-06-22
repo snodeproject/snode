@@ -1,0 +1,97 @@
+name: "🐛 Bug Report"
+description: "Segnala un problema o un comportamento inatteso in Snode"
+title: "[BUG] Descrizione breve del problema"
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un bug in **Snode**!  
+        Compila i campi seguenti per aiutarci a riprodurre e risolvere il problema.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di Snode
+      description: "Esempio: 0.1.0"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Versione di Python
+      description: "Esempio: Python 3.12.1"
+      placeholder: "3.12.x"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operativo
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del problema
+      description: "Spiega cosa succede e cosa ti aspettavi che accadesse."
+      placeholder: "Quando eseguo snode.py con un file JS, ottengo un errore..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passi per riprodurre
+      description: "Elenca i passi necessari per riprodurre il bug."
+      placeholder: |
+        1. Esegui `python snode.py file.js`
+        2. ...
+        3. Errore mostrato
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Codice o comando coinvolto
+      description: "Incolla qui il codice JS o Python che causa il problema."
+      render: bash
+      placeholder: |
+        console.log("Hello Snode");
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log o output
+      description: "Incolla qui eventuali errori o output della console."
+      render: text
+      placeholder: |
+        Traceback (most recent call last):
+          File "snode.py", line 123, in <module>
+            ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informazioni aggiuntive
+      description: "Qualsiasi dettaglio utile non incluso sopra."
+      placeholder: "Ad esempio: succede solo con moduli HTTP, solo in Windows, ecc."
+    validations:
+      required: false
+      
