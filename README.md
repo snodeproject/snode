@@ -7,6 +7,8 @@
 [![CI](https://github.com/snodeproject/snode/actions/workflows/ci.yml/badge.svg)](https://github.com/snodeproject/snode/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Top Language](https://img.shields.io/github/languages/top/snodeproject/snode)](https://github.com/snodeproject/snode)
+[![Stars](https://img.shields.io/github/stars/snodeproject/snode)](https://github.com/snodeproject/snode/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/snodeproject/snode)](https://github.com/snodeproject/snode/commits/main)
 
 
 </div>
