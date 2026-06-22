@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.14
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Snode
+        run: python snode.py
+
+      - name: Show help
+        run: python snode.py -h
+
+      - name: Show SPM help
+        run: python snode.py spm -h
+
+      - name: Test SPM install
+        run: python snode.py spm install test
+        
