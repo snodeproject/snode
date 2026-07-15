@@ -329,7 +329,7 @@ class Snode:
 
     def repl(self):
         self.ensure_runtime()
-        print('Snode REPL 0.1.0 (digita exit o quit per uscire)')
+        print('Snode 0.1.1 (digita exit o quit per uscire)')
         while True:
             try:
                 source = input('snode> ')
@@ -403,7 +403,7 @@ def main(argv=None):
     node = Snode()
 
     if args.version:
-        print('Snode v0.1.0 - SPM v26.0')
+        print('Snode v0.1.1 - SPM v26.0')
         return
 
     if args.eval_expr:
